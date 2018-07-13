@@ -11,13 +11,13 @@ namespace FakeNewsDetectorApp
         string searchengine = "001556608615224035032:lxiuybrekty";
         CustomsearchService svc = null;
 
-        bool Init()
+        public bool Init()
         {
             svc = new CustomsearchService(new BaseClientService.Initializer { ApiKey = apikey });
             return true;
         }
 
-        string[] Search(string _query)
+        public string[] Search(string _query)
         {
             CseResource.ListRequest listRequest = svc.Cse.List(_query);
             listRequest.Cx = searchengine;
