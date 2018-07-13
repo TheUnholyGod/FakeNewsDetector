@@ -40,9 +40,11 @@ namespace FakeNewsDetectorApp
             string[] urls = Program.searcher.Search(baseinfo.Title);
             ArticleInfo[] checkerinfo = new ArticleInfo[urls.Length];
             int i = 0;
+            richTextBox1.Text = baseinfo.All;
             foreach (string url in urls)
             {
                 checkerinfo[i] = HtmlRemoval.ExtractInfo(url);
+                richTextBox1.Text += checkerinfo[i].All;
                 ++i;
             }
 

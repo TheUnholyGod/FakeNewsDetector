@@ -12,7 +12,14 @@ namespace FakeNewsDetectorApp
         public static string GetSource(string _url)
         {
             WebClient wc = new WebClient();
-            return wc.DownloadString(_url);
+            try
+            {
+                return wc.DownloadString(_url);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error 410");
+            }
         }
     }
 }
