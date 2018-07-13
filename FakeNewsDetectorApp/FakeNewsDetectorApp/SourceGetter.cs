@@ -12,8 +12,7 @@ namespace FakeNewsDetectorApp
         public static string GetSource(string _url)
         {
             WebClient wc = new WebClient();
-            //wc.DownloadFile();
-            return "";
+            return wc.DownloadString(_url);
         }
     }
 }

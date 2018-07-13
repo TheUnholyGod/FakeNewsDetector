@@ -17,8 +17,10 @@ namespace FakeNewsDetectorApp
             InitializeComponent();
             this.richTextBox1.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBox1_LinkClicked);
 
-            Form2 f2 = new Form2();
-            f2.ShowDialog();
+            textBox1.Parent = tabPage1;
+            Search.Parent = tabPage1;
+            richTextBox1.Parent = tabPage1;
+
         }
 
         private void Search_Click(object sender, EventArgs e)
@@ -40,9 +42,28 @@ namespace FakeNewsDetectorApp
           System.Diagnostics.Process.Start(e.LinkText);
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        private void toolStripSplitButton1_ButtonClick(object sender, EventArgs e)
         {
-
+            toolStripSplitButton1.ShowDropDown();
         }
+
+        //private void Thesaurus_Click(object sender, EventArgs e)
+        //{
+        //    string test = SourceGetter.GetSource(textBox2.Text);
+
+        //    HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
+        //    doc.LoadHtml(test);
+        //    string prnt = "";
+        //    string title = doc.DocumentNode.SelectSingleNode("//title").InnerText;
+        //    prnt += title;
+        //    string imgUrl = doc.DocumentNode.SelectSingleNode("//meta[@property='og:image']").Attributes["content"].Value;
+        //    foreach(HtmlAgilityPack.HtmlNode n in doc.DocumentNode.SelectNodes("//p"))
+        //    {
+        //        prnt += n.InnerText;
+        //    }
+
+
+        //    richTextBox2.Text = prnt;
+        //}
     }
 }
