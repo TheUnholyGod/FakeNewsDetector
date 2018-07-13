@@ -25,16 +25,31 @@ namespace FakeNewsDetectorApp
 
         private void Search_Click(object sender, EventArgs e)
         {
-            richTextBox1.DetectUrls = true;
+            //richTextBox1.DetectUrls = true;
 
-            richTextBox1.Text = "";
+            //richTextBox1.Text = "";
 
-            string[] urls = Program.searcher.Search(textBox1.Text);
+            //string[] urls = Program.searcher.Search(textBox1.Text);
 
+            //foreach (string url in urls)
+            //{
+            //    richTextBox1.Text += url + "\n";
+            //}
+
+            ArticleInfo baseinfo = HtmlRemoval.ExtractInfo(textBox1.Text);
+            string[] urls = Program.searcher.Search(baseinfo.Title);
+            ArticleInfo[] checkerinfo = new ArticleInfo[urls.Length];
+            int i = 0;
+            richTextBox1.Text = baseinfo.All;
             foreach (string url in urls)
             {
-                richTextBox1.Text += url + "\n";
+                checkerinfo[i] = HtmlRemoval.ExtractInfo(url);
+                richTextBox1.Text += checkerinfo[i].All;
+                ++i;
             }
+
+
+
         }
 
         private void richTextBox1_LinkClicked(object sender, System.Windows.Forms.LinkClickedEventArgs e)
