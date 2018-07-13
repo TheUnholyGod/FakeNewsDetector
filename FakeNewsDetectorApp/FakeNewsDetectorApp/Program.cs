@@ -9,6 +9,8 @@ namespace FakeNewsDetectorApp
     static class Program
     {
         public static GoogleSearch searcher;
+        public static brain b_brain = new brain();
+        public static PointSystem ps_pointSystem = new PointSystem();
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -21,9 +23,7 @@ namespace FakeNewsDetectorApp
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
 
-            brain temp = new brain();
-
-            temp.Store("hi bye", 'y');
+            
         }
     }
 }
