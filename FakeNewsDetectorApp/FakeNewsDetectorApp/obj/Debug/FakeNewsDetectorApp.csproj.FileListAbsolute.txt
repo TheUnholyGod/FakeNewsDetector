@@ -54,4 +54,6 @@ C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\Fak
 C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\obj\Debug\FakeNewsDetectorApp.csproj.CopyComplete
 C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\obj\Debug\FakeNewsDetectorApp.exe
 C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\obj\Debug\FakeNewsDetectorApp.pdb
-C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\obj\Debug\FakeNewsDetectorApp.Form2.resources
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\HtmlAgilityPack.dll
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\HtmlAgilityPack.xml

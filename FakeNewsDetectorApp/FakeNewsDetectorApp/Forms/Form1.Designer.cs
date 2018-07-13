@@ -31,11 +31,14 @@ namespace FakeNewsDetectorApp
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Search = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.Thesaurus = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(134, 132);
+            this.textBox1.Location = new System.Drawing.Point(72, 132);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(524, 22);
             this.textBox1.TabIndex = 0;
@@ -44,7 +47,7 @@ namespace FakeNewsDetectorApp
             // Search
             // 
             this.Search.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Search.Location = new System.Drawing.Point(358, 199);
+            this.Search.Location = new System.Drawing.Point(296, 193);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(76, 23);
             this.Search.TabIndex = 1;
@@ -54,18 +57,45 @@ namespace FakeNewsDetectorApp
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(134, 270);
+            this.richTextBox1.Location = new System.Drawing.Point(72, 270);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(524, 168);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
+            // Thesaurus
+            // 
+            this.Thesaurus.Location = new System.Drawing.Point(998, 193);
+            this.Thesaurus.Name = "Thesaurus";
+            this.Thesaurus.Size = new System.Drawing.Size(76, 23);
+            this.Thesaurus.TabIndex = 3;
+            this.Thesaurus.Text = "Define";
+            this.Thesaurus.UseVisualStyleBackColor = true;
+            this.Thesaurus.Click += new System.EventHandler(this.Thesaurus_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(774, 132);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(524, 22);
+            this.textBox2.TabIndex = 4;
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(774, 270);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(524, 168);
+            this.richTextBox2.TabIndex = 5;
+            this.richTextBox2.Text = "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 501);
+            this.ClientSize = new System.Drawing.Size(1352, 501);
+            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Thesaurus);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.textBox1);
@@ -81,6 +111,9 @@ namespace FakeNewsDetectorApp
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button Search;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button Thesaurus;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.RichTextBox richTextBox2;
     }
 }
 
