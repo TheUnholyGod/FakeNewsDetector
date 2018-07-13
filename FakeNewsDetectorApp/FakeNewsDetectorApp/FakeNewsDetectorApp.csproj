@@ -85,8 +85,16 @@
   <ItemGroup>
     <Compile Include="brain.cs" />
     <Compile Include="Class1.cs" />
+<<<<<<< HEAD
     <Compile Include="FileManager.cs" />
+=======
+<<<<<<< HEAD
+    <Compile Include="FileManager.cs" />
+    <Compile Include="Form1.cs">
+=======
+>>>>>>> 1480749149dfd14d95ce137571df02cd5f921377
     <Compile Include="Forms\Form1.cs">
+>>>>>>> 200e67ffd1e10745185171948b9a432c44543aa8
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Form1.Designer.cs">
@@ -96,8 +104,16 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SourceGetter.cs" />
+<<<<<<< HEAD
     <Compile Include="tokenisation.cs" />
+=======
+<<<<<<< HEAD
+    <Compile Include="tokenisation.cs" />
+    <EmbeddedResource Include="Form1.resx">
+=======
+>>>>>>> 1480749149dfd14d95ce137571df02cd5f921377
     <EmbeddedResource Include="Forms\Form1.resx">
+>>>>>>> 200e67ffd1e10745185171948b9a432c44543aa8
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
