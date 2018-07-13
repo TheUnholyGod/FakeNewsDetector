@@ -62,6 +62,23 @@ namespace FakeNewsDetectorApp
             toolStripSplitButton1.ShowDropDown();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string Text = richTextBox2.Text;
+
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //private void Thesaurus_Click(object sender, EventArgs e)
         //{
         //    string test = SourceGetter.GetSource(textBox2.Text);
