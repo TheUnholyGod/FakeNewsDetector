@@ -19,7 +19,7 @@ namespace FakeNewsDetectorApp
 
     public class brain
     {
-        public Dictionary<string, pair> storage = new Dictionary<string, pair>();
+        Dictionary<string, pair> storage = new Dictionary<string, pair>();
 
         public void Store(string input, char decision)
         {
