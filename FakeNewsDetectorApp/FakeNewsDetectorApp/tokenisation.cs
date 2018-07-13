@@ -23,7 +23,7 @@ namespace FakeNewsDetectorApp
             }
         }
 
-        public List<string> Separation(string input)
+        public List<string> Separation(string input, bool check_emotional = true)
         {
             OpenNLP.Tools.Tokenize.EnglishRuleBasedTokenizer tokenizer = new OpenNLP.Tools.Tokenize.EnglishRuleBasedTokenizer(false);
             var tokens = tokenizer.Tokenize(input);
@@ -32,7 +32,11 @@ namespace FakeNewsDetectorApp
 
             foreach (var c in tokens)
             {
-                if(IsWordEmotional(c))
+                if(IsWordEmotional(c) && check_emotional)
+                {
+                    temp.Add(c);
+                }
+                else if(!check_emotional)
                 {
                     temp.Add(c);
                 }

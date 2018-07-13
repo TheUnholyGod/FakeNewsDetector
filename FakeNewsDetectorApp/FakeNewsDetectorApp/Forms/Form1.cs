@@ -71,6 +71,10 @@ namespace FakeNewsDetectorApp
                 percentage = ((float)negative_article / (float)(positive_article + negative_article)) * 100f;
             }
 
+            if(percentage > 70)
+            {
+                //Program.ps_pointSystem.SetPoint(baseinfo.)
+            }
         }
 
         private void richTextBox1_LinkClicked(object sender, System.Windows.Forms.LinkClickedEventArgs e)

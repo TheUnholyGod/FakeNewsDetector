@@ -21,9 +21,12 @@ namespace FakeNewsDetectorApp
             searcher.Init();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            b_brain.LoadData();
+
             Application.Run(new Form1());
 
-            
+            b_brain.SaveData();
         }
     }
 }
