@@ -20,6 +20,10 @@ namespace FakeNewsDetectorApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+            brain temp = new brain();
+
+            temp.Store("hi bye", 'y');
         }
     }
 }
