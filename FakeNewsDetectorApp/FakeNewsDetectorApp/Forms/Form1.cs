@@ -21,6 +21,17 @@ namespace FakeNewsDetectorApp
             Search.Parent = tabPage1;
             richTextBox1.Parent = tabPage1;
 
+            AttachConsoleForCommandLineMode();
+        }
+
+        [System.Runtime.InteropServices.DllImport("kernel32.dll")]
+        private static extern bool AttachConsole(int dwProcessId);
+        private const int ATTACH_PARENT_PROCESS = -1;
+
+        internal static void AttachConsoleForCommandLineMode()
+        {
+            //must call before any calls to Console.WriteLine()
+            AttachConsole(ATTACH_PARENT_PROCESS);
         }
 
         private void Search_Click(object sender, EventArgs e)
