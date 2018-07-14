@@ -109,7 +109,8 @@ namespace FakeNewsDetectorApp
 
                 string to_lower_temp = temp_list[0].ToLower();
 
-                storage.Add(to_lower_temp, new pair(0, 0));
+                if(!storage.ContainsKey(to_lower_temp))
+                    storage.Add(to_lower_temp, new pair(0, 0));
                 int.TryParse(temp_list[1], out storage[to_lower_temp].first);
                 int.TryParse(temp_list[2], out storage[to_lower_temp].second);
 
