@@ -110,6 +110,21 @@ namespace FakeNewsDetectorApp
             
         }
 
+        private void x576ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Size = new System.Drawing.Size(1024, 576);
+        }
+
+        private void x720ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Size = new System.Drawing.Size(1280, 720);
+        }
+
+        private void toolStripSplitButton1_ButtonClick(object sender, EventArgs e)
+        {
+            toolStripSplitButton1.ShowDropDown();
+        }
+
 
         //private void Thesaurus_Click(object sender, EventArgs e)
         //{
