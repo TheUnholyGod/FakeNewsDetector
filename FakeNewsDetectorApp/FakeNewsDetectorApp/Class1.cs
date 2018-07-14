@@ -31,5 +31,20 @@ namespace FakeNewsDetectorApp
             }
             return ret;
         }
+
+        public string[] Check(string _query)
+        {
+            CseResource.ListRequest listRequest = svc.Cse.List(_query);
+            listRequest.Cx = "001556608615224035032:bh8b1bv0adq";
+            Search req = listRequest.Execute();
+            string[] ret = new string[req.Items.Count];
+            int i = 0;
+            foreach (Result result in req.Items)
+            {
+                ret[i] = result.Link;
+                ++i;
+            }
+            return ret;
+        }
     }
 }

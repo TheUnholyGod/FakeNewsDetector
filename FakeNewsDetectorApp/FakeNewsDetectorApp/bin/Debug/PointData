@@ -1,6 +1,7 @@
 straitstimes 3
 rssing 0
 msn 0
+<<<<<<< HEAD
 yahoo -2
 dailymail -1
 scmp 0
@@ -28,3 +29,9 @@ wkyt 1
 truthdig 1
 http://presscorp -1
 cnbc -1
+=======
+yahoo 0
+dailymail 0
+scmp 0
+org 0
+>>>>>>> 83c4a6f58a450ec9ea4c65060cb4b09f97c7e431

@@ -9,6 +9,8 @@ namespace FakeNewsDetectorApp
     static class Program
     {
         public static GoogleSearch searcher;
+        public static GoogleSearch factsearcher;
+
         public static brain b_brain = new brain();
         public static PointSystem ps_pointSystem = new PointSystem();
         /// <summary>
@@ -18,7 +20,9 @@ namespace FakeNewsDetectorApp
         static void Main()
         {
             searcher = new GoogleSearch();
+            factsearcher = new GoogleSearch();
             searcher.Init();
+            factsearcher.Init();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 

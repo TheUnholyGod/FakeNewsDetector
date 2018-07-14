@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Chee Mun\Desktop\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\FakeNewsDetectorApp.exe.config
 C:\Users\Chee Mun\Desktop\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\FakeNewsDetectorApp.exe
 C:\Users\Chee Mun\Desktop\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\FakeNewsDetectorApp.pdb
@@ -31,3 +32,38 @@ C:\Users\Chee Mun\Desktop\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorA
 C:\Users\Chee Mun\Desktop\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\obj\Debug\FakeNewsDetectorApp.csproj.CopyComplete
 C:\Users\Chee Mun\Desktop\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\obj\Debug\FakeNewsDetectorApp.exe
 C:\Users\Chee Mun\Desktop\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\obj\Debug\FakeNewsDetectorApp.pdb
+=======
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\obj\Debug\FakeNewsDetectorApp.csprojAssemblyReference.cache
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\obj\Debug\FakeNewsDetectorApp.Form1.resources
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\obj\Debug\FakeNewsDetectorApp.Properties.Resources.resources
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\obj\Debug\FakeNewsDetectorApp.csproj.GenerateResource.cache
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\obj\Debug\FakeNewsDetectorApp.csproj.CoreCompileInputs.cache
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\obj\Debug\FakeNewsDetectorApp.exe
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\obj\Debug\FakeNewsDetectorApp.pdb
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\FakeNewsDetectorApp.exe.config
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\FakeNewsDetectorApp.exe
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\FakeNewsDetectorApp.pdb
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\Google.Apis.Core.dll
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\Google.Apis.Customsearch.v1.dll
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\Google.Apis.dll
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\HtmlAgilityPack.dll
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\OpenNLP.dll
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\SharpEntropy.dll
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\System.Net.Http.dll
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\Google.Apis.pdb
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\Google.Apis.xml
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\Google.Apis.Core.pdb
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\Google.Apis.Core.xml
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\Google.Apis.Customsearch.v1.pdb
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\Google.Apis.Customsearch.v1.xml
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\HtmlAgilityPack.xml
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\TheUnholyGod\Documents\Work\Fake News Detector App\FakeNewsDetector\FakeNewsDetectorApp\FakeNewsDetectorApp\obj\Debug\FakeNewsDetectorApp.csproj.CopyComplete
+>>>>>>> 83c4a6f58a450ec9ea4c65060cb4b09f97c7e431
