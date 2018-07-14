@@ -32,7 +32,7 @@ namespace FakeNewsDetectorApp
 
             foreach (var c in tokens)
             {
-                if(IsWordEmotional(c) && check_emotional)
+                if(IsWordEmotional(c.ToLower()) && check_emotional)
                 {
                     temp.Add(c);
                 }

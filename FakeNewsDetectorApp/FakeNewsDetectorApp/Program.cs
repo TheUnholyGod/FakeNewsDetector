@@ -23,10 +23,12 @@ namespace FakeNewsDetectorApp
             Application.SetCompatibleTextRenderingDefault(false);
 
             b_brain.LoadData();
+            ps_pointSystem.LoadData();
 
             Application.Run(new Form1());
 
             b_brain.SaveData();
+            ps_pointSystem.SaveData();
         }
     }
 }

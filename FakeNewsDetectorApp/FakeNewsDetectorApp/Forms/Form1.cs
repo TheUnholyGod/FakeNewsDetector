@@ -26,7 +26,10 @@ namespace FakeNewsDetectorApp
         {
             stopwatch.Start();
             ArticleInfo baseinfo = HtmlRemoval.ExtractInfo(textBox2.Text);
-            richTextBox1.Text = baseinfo.Title + "\n";
+            baseinfo.url = textBox2.Text;
+            baseinfo.websitename = baseinfo.url.Substring(baseinfo.url.IndexOf('.') + 1);
+            baseinfo.websitename = baseinfo.websitename.Substring(0, baseinfo.websitename.IndexOf('.'));
+            richTextBox1.Text = baseinfo.websitename + "\n";
             string full = "";
             foreach (KeyValuePair<string,double> prnt in Program.b_brain.GetTFIDF(new string[] { baseinfo.Title, baseinfo.Articleinfo }))
             {
@@ -35,45 +38,77 @@ namespace FakeNewsDetectorApp
                     full += prnt.Key + " ";
             }
             richTextBox1.Text += full;
-            return;
+            
             string[] urls = Program.searcher.Search(baseinfo.Title);
             ArticleInfo[] checkerinfo = new ArticleInfo[urls.Length];
             int i = 0;
-            richTextBox1.Text = baseinfo.All;
+            richTextBox1.Text += baseinfo.All;
 
             int positive_article = 0, negative_article = 0;
             float percentage = 0;
 
+            string[] temp_array = new string[checkerinfo.Length];
+
+            
+
             foreach (string url in urls)
             {
+                
+                //if (i == 0)
+                //{
+                //    ++i;
+                //    continue;
+                //}
+                richTextBox1.Text += url + "\n";
                 checkerinfo[i] = HtmlRemoval.ExtractInfo(url);
-
-                if (Program.b_brain.Result(checkerinfo[i].Articleinfo))
+                temp_array[i] = checkerinfo[i].Articleinfo;
+                checkerinfo[i].url = url;
+                checkerinfo[i].websitename = checkerinfo[i].url.Substring(checkerinfo[i].url.IndexOf('.') + 1);
+                try
                 {
-                    ++positive_article;
+                    checkerinfo[i].websitename = checkerinfo[i].websitename.Substring(0, checkerinfo[i].websitename.IndexOf('.'));
+                }
+                catch
+                {
+                    checkerinfo[i].websitename = checkerinfo[i].url.Substring(0,checkerinfo[i].url.IndexOf('.'));
+                }
+                //richTextBox1.Text += checkerinfo[i].All;
+                ++i;
+            }
+            try
+            {
+                if (Program.b_brain.Relevance(full, baseinfo.Articleinfo, temp_array))
+                {
+                    richTextBox1.Text += "\n" + "RELIABLE!";
+                    Program.ps_pointSystem.SetPoint(baseinfo.websitename,true);
+                    foreach(int i1 in Program.b_brain.positive)
+                    {
+                        Program.ps_pointSystem.SetPoint(checkerinfo[i1].websitename, true);
+                    }
+                    foreach (int i1 in Program.b_brain.negative)
+                    {
+                        Program.ps_pointSystem.SetPoint(checkerinfo[i1].websitename, false);
+                    }
                 }
                 else
                 {
-                    ++negative_article;
+                    richTextBox1.Text += "\n" + "UNRELIABLE";
+                    Program.ps_pointSystem.SetPoint(baseinfo.websitename, false);
+                    foreach (int i1 in Program.b_brain.positive)
+                    {
+                        Program.ps_pointSystem.SetPoint(checkerinfo[i1].websitename, false);
+                    }
+                    foreach (int i1 in Program.b_brain.negative)
+                    {
+                        Program.ps_pointSystem.SetPoint(checkerinfo[i1].websitename, true);
+                    }
                 }
-
-                richTextBox1.Text += checkerinfo[i].All;
-                ++i;
             }
-
-            if(Program.b_brain.Result(baseinfo.Articleinfo))
+            catch (Exception exp)
             {
-                percentage = ((float)positive_article / (float)(positive_article + negative_article)) * 100f;
+                richTextBox1.Text += exp.Message;
             }
-            else
-            {
-                percentage = ((float)negative_article / (float)(positive_article + negative_article)) * 100f;
-            }
-
-            if(percentage > 70)
-            {
-                //Program.ps_pointSystem.SetPoint(baseinfo.)
-            }
+           
             richTextBox3.Text = stopwatch.GetElapsedTime().ToString();
             stopwatch.Stop();
         }
