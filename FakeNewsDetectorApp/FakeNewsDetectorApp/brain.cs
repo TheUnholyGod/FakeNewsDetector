@@ -96,5 +96,39 @@ namespace FakeNewsDetectorApp
 
             return ((total > 0) ? true : false);
         }
+
+        public void LoadData()
+        {
+            string[] temp = FileManager.LoadFromFile("WordData");
+
+            tokenisation temp_token = new tokenisation();
+
+            foreach(string s in temp)
+            {
+                List<string> temp_list = temp_token.Separation(s, false);
+
+                string to_lower_temp = temp_list[0].ToLower();
+
+                if(!storage.ContainsKey(to_lower_temp))
+                    storage.Add(to_lower_temp, new pair(0, 0));
+                int.TryParse(temp_list[1], out storage[to_lower_temp].first);
+                int.TryParse(temp_list[2], out storage[to_lower_temp].second);
+
+            }
+        }
+
+        public void SaveData()
+        {
+            string[] temp = new string[storage.Count];
+            int i = 0;
+            foreach (var p in storage)
+            {
+                string final = p.Key.ToString() + " " + p.Value.first.ToString() + " " + p.Value.second.ToString();
+                temp[i] = final;
+                ++i;
+            }
+
+            FileManager.SaveToFile("WordData", temp);
+        }
     }
 }

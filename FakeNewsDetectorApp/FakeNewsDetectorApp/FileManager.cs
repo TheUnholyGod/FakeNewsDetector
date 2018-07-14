@@ -13,18 +13,10 @@ namespace FakeNewsDetectorApp
         {
             if (_data.Length <= 0)
                 return false;
-            if(!File.Exists(_filename))
-            {
-                File.Create(_filename);
-                //while(!File.Exists(_filename))
-                //{
 
-                //}
-            }
-            foreach(string s in _data)
-            {
-                File.AppendAllText(_filename, s + "\n");
-            }
+            File.WriteAllText(_filename, "");
+
+            File.AppendAllLines(_filename, _data);
             return true;
         }
 

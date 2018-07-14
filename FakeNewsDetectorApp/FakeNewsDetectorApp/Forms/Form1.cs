@@ -12,26 +12,14 @@ namespace FakeNewsDetectorApp
 {
     public partial class Form1 : Form
     {
+        Stopwatch stopwatch;
+
         public Form1()
         {
             InitializeComponent();
             this.richTextBox1.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBox1_LinkClicked);
 
-            textBox1.Parent = tabPage1;
-            Search.Parent = tabPage1;
-            richTextBox1.Parent = tabPage1;
-
-            AttachConsoleForCommandLineMode();
-        }
-
-        [System.Runtime.InteropServices.DllImport("kernel32.dll")]
-        private static extern bool AttachConsole(int dwProcessId);
-        private const int ATTACH_PARENT_PROCESS = -1;
-
-        internal static void AttachConsoleForCommandLineMode()
-        {
-            //must call before any calls to Console.WriteLine()
-            AttachConsole(ATTACH_PARENT_PROCESS);
+            stopwatch = new Stopwatch();
         }
 
         private void Search_Click(object sender, EventArgs e)
@@ -47,20 +35,47 @@ namespace FakeNewsDetectorApp
             //    richTextBox1.Text += url + "\n";
             //}
 
-            ArticleInfo baseinfo = HtmlRemoval.ExtractInfo(textBox1.Text);
+            
+            ArticleInfo baseinfo = HtmlRemoval.ExtractInfo(textBox2.Text);
             string[] urls = Program.searcher.Search(baseinfo.Title);
             ArticleInfo[] checkerinfo = new ArticleInfo[urls.Length];
             int i = 0;
             richTextBox1.Text = baseinfo.All;
+
+            int positive_article = 0, negative_article = 0;
+            float percentage = 0;
+
             foreach (string url in urls)
             {
                 checkerinfo[i] = HtmlRemoval.ExtractInfo(url);
+
+                if (Program.b_brain.Result(checkerinfo[i].Articleinfo))
+                {
+                    ++positive_article;
+                }
+                else
+                {
+                    ++negative_article;
+                }
+
                 richTextBox1.Text += checkerinfo[i].All;
                 ++i;
             }
 
+            if(Program.b_brain.Result(baseinfo.Articleinfo))
+            {
+                percentage = ((float)positive_article / (float)(positive_article + negative_article)) * 100f;
+            }
+            else
+            {
+                percentage = ((float)negative_article / (float)(positive_article + negative_article)) * 100f;
+            }
 
-
+            if(percentage > 70)
+            {
+                //Program.ps_pointSystem.SetPoint(baseinfo.)
+            }
+            
         }
 
         private void richTextBox1_LinkClicked(object sender, System.Windows.Forms.LinkClickedEventArgs e)
@@ -68,20 +83,33 @@ namespace FakeNewsDetectorApp
           System.Diagnostics.Process.Start(e.LinkText);
         }
 
-        private void toolStripSplitButton1_ButtonClick(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            toolStripSplitButton1.ShowDropDown();
+            string Text = richTextBox2.Text;
+
+            richTextBox2.Text += "\n" + Program.b_brain.Result(richTextBox2.Text).ToString();
+
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-
+            string Text = richTextBox2.Text;
+            Program.b_brain.Store(richTextBox2.Text, 'y');
+            
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
+            string Text = richTextBox2.Text;
 
+            Program.b_brain.Store(richTextBox2.Text, 'n');
         }
+
+        private void urlButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
 
         //private void Thesaurus_Click(object sender, EventArgs e)
         //{
