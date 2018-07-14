@@ -30,9 +30,9 @@ namespace FakeNewsDetectorApp
         {
             int total = 0;
 
-            foreach(var dic in point_storage)
+            foreach (var dic in point_storage)
             {
-                if(dic.Key.Equals(_sitename))
+                if (dic.Key.Equals(_sitename))
                 {
                     total += dic.Value;
                 }
@@ -43,7 +43,7 @@ namespace FakeNewsDetectorApp
 
         public void SetPoint(string _site, bool _trustworthy)
         {
-            if(!point_storage.ContainsKey(_site))
+            if (!point_storage.ContainsKey(_site))
             {
                 point_storage.Add(_site, 0);
             }
@@ -61,7 +61,7 @@ namespace FakeNewsDetectorApp
             {
                 List<string> temp_list = temp_token.Separation(s, false);
 
-                string to_lower_temp = temp_list[0].ToLower();              
+                string to_lower_temp = temp_list[0].ToLower();
 
                 int temp_int = 0;
                 int.TryParse(temp_list[1], out temp_int);
@@ -84,5 +84,30 @@ namespace FakeNewsDetectorApp
 
             FileManager.SaveToFile("PointData", temp);
         }
+        public string[] GetTop5()
+        {
+            List<string> ret = new List<string>();
+            foreach(KeyValuePair<string,int> s in point_storage)
+            {
+                if(s.Value >= 0)
+                    ret.Add(s.Value.ToString() + " " + s.Key.ToString());
+            }
+            ret.Sort();
+            return ret.ToArray();
+        }
+
+        public string[] GetNegative()
+        {
+            List<string> ret = new List<string>();
+            foreach (KeyValuePair<string, int> s in point_storage)
+            {
+                if (s.Value < 0)
+                    ret.Add(s.Value.ToString() + " " + s.Key.ToString());
+            }
+            ret.Sort();
+            return ret.ToArray();
+        }
     }
+
+   
 }

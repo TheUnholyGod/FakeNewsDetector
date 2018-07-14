@@ -522,6 +522,159 @@ namespace FakeNewsDetectorApp
             this.negativeLabel.BackColor = Color.Goldenrod;
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            positiveTextBox.Text = "";
+            negativeTextBox.Text = "";
+
+            int i = 1;
+            foreach (string s in Program.ps_pointSystem.GetTop5())
+            {
+                positiveTextBox.Text += i.ToString() + ". " + s + "\n";
+                ++i;
+            }
+
+            foreach (string s in Program.ps_pointSystem.GetNegative())
+            {
+                negativeTextBox.Text += i.ToString() + ". " + s + "\n";
+                ++i;
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            richTextBox4.Text = "";
+            foreach (string s in Program.factsearcher.Check(textBox1.Text))
+            {
+                richTextBox4.Text += s + "\n";
+            }
+        }
+
+        private void leaderboardButtonHotTrackToolStripMenuItem14_Click(object sender, EventArgs e)
+        {
+            this.button4.BackColor = SystemColors.HotTrack;
+        }
+
+        private void leaderboardButtonSilverToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.button4.BackColor = Color.Silver;
+        }
+
+        private void leaderboardButtonControlDarkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.button4.BackColor = SystemColors.ControlDark;
+        }
+
+        private void leaderboardButtonMaroonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.button4.BackColor = Color.Maroon;
+        }
+
+        private void leaderboardButtonGoldenrodToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.button4.BackColor = Color.Goldenrod;
+        }
+
+        private void factCheckingTabHotTrackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.tabPage4.BackColor = SystemColors.HotTrack;
+        }
+
+        private void factCheckingTabSilverToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.tabPage4.BackColor = Color.Silver;
+        }
+
+        private void factCheckingTabControlDarkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.tabPage4.BackColor = SystemColors.ControlDark;
+        }
+
+        private void factCheckingTabMaroonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.tabPage4.BackColor = Color.Maroon;
+        }
+
+        private void factCheckingTabGoldenrodToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.tabPage4.BackColor = Color.Goldenrod;
+        }
+
+        private void factQueryHotTrackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.textBox1.BackColor = SystemColors.HotTrack;
+        }
+
+        private void factQuerySilverToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.textBox1.BackColor = Color.Silver;
+        }
+
+        private void factQueryControlDarkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.textBox1.BackColor = SystemColors.ControlDark;
+        }
+
+        private void factQueryMaroonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.textBox1.BackColor = Color.Maroon;
+        }
+
+        private void factQueryGoldenrodToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.textBox1.BackColor = Color.Goldenrod;
+        }
+
+        private void checkFactButtonHotTrackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.textBox2.BackColor = SystemColors.HotTrack;
+        }
+
+        private void checkFactButtonSilverToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.textBox2.BackColor = Color.Silver;
+        }
+
+        private void checkFactButtonControlDarkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.textBox2.BackColor = SystemColors.ControlDark;
+        }
+
+        private void checkFactButtonMaroonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.textBox2.BackColor = Color.Maroon;
+        }
+
+        private void checkFactButtonGoldenrodToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.textBox2.BackColor = Color.Goldenrod;
+        }
+
+        private void factResultHotTrackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.richTextBox4.BackColor = SystemColors.HotTrack;
+        }
+
+        private void factResultSilverToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.richTextBox4.BackColor = Color.Silver;
+        }
+
+        private void factResultControlDarkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.richTextBox4.BackColor = SystemColors.ControlDark;
+        }
+
+        private void factResultMaroonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.richTextBox4.BackColor = Color.Maroon;
+        }
+
+        private void factResultGoldenrodToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.richTextBox4.BackColor = Color.Goldenrod;
+        }
+
         //private void Thesaurus_Click(object sender, EventArgs e)
         //{
         //    string test = SourceGetter.GetSource(textBox2.Text);
