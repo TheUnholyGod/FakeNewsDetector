@@ -24,19 +24,18 @@ namespace FakeNewsDetectorApp
 
         private void Search_Click(object sender, EventArgs e)
         {
-            //richTextBox1.DetectUrls = true;
-
-            //richTextBox1.Text = "";
-
-            //string[] urls = Program.searcher.Search(textBox1.Text);
-
-            //foreach (string url in urls)
-            //{
-            //    richTextBox1.Text += url + "\n";
-            //}
-
-            
+            stopwatch.Start();
             ArticleInfo baseinfo = HtmlRemoval.ExtractInfo(textBox2.Text);
+            richTextBox1.Text = baseinfo.Title + "\n";
+            string full = "";
+            foreach (KeyValuePair<string,double> prnt in Program.b_brain.GetTFIDF(new string[] { baseinfo.Title, baseinfo.Articleinfo }))
+            {
+                richTextBox1.Text += prnt.Key + " : " + prnt.Value.ToString() + "\n";
+                if(prnt.Value == 0)
+                    full += prnt.Key + " ";
+            }
+            richTextBox1.Text += full;
+            return;
             string[] urls = Program.searcher.Search(baseinfo.Title);
             ArticleInfo[] checkerinfo = new ArticleInfo[urls.Length];
             int i = 0;
@@ -75,7 +74,8 @@ namespace FakeNewsDetectorApp
             {
                 //Program.ps_pointSystem.SetPoint(baseinfo.)
             }
-            
+            richTextBox3.Text = stopwatch.GetElapsedTime().ToString();
+            stopwatch.Stop();
         }
 
         private void richTextBox1_LinkClicked(object sender, System.Windows.Forms.LinkClickedEventArgs e)

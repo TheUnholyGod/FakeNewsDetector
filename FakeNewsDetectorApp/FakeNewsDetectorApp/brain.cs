@@ -21,6 +21,48 @@ namespace FakeNewsDetectorApp
     {
         Dictionary<string, pair> storage = new Dictionary<string, pair>();
 
+        public Dictionary<string,double> GetTFIDF(string[] docs)
+        {
+            Dictionary<string, double> returner = new Dictionary<string, double>();
+            tokenisation temp_token = new tokenisation();
+            List<string[]> seperatedinputs = new List<string[]>();
+            foreach (string s in docs)
+            {
+               seperatedinputs.Add(temp_token.Separation(s).ToArray());
+            }
+            Dictionary<int, Dictionary<string, int>> keywordcounter = new Dictionary<int, Dictionary<string, int>>();
+            int i = 0;
+            foreach (string[] container in seperatedinputs)
+            {
+                keywordcounter.Add(i, new Dictionary<string, int>());
+                foreach (string s in container)
+                {
+                    string lowered_s = s.ToLower();
+                    if (!keywordcounter[i].ContainsKey(lowered_s))
+                        keywordcounter[i].Add(lowered_s, 0);
+                    keywordcounter[i][lowered_s]++;
+                }
+                ++i;
+            }
+            Dictionary<string, int> basechecker = keywordcounter[0];
+            
+            int totalDocs = keywordcounter.Count;
+            i = 0;
+            foreach (KeyValuePair<string, int> word in basechecker)
+            {
+                int NoDocuments = 0;
+
+                foreach (KeyValuePair<int, Dictionary<string, int>> key in keywordcounter)
+                {
+                    if (key.Value.ContainsKey(word.Key))
+                        ++NoDocuments;
+                }
+                double frac = (double)(totalDocs / (NoDocuments));
+                returner[word.Key] = word.Value * Math.Log10(frac);
+            }
+            return returner;
+        }
+
         public void Store(string input, char decision)
         {
             tokenisation temp_token = new tokenisation();
