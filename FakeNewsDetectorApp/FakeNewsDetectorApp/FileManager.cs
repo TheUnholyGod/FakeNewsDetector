@@ -9,12 +9,15 @@ namespace FakeNewsDetectorApp
 {
     class FileManager
     {
-        public static bool SaveToFile(string _filename,string[] _data)
+        public static bool SaveToFile(string _filename, string[] _data)
         {
             if (_data.Length <= 0)
                 return false;
 
-            File.WriteAllText(_filename, "");
+            if (!File.Exists(_filename))
+                File.Create(_filename);
+
+                File.WriteAllText(_filename, "");
 
             File.AppendAllLines(_filename, _data);
             return true;

@@ -20,6 +20,8 @@ namespace FakeNewsDetectorApp
     public class brain
     {
         Dictionary<string, pair> storage = new Dictionary<string, pair>();
+        public List<int> positive = new List<int>();
+        public List<int> negative = new List<int>();
 
         public Dictionary<string,double> GetTFIDF(string[] docs)
         {
@@ -137,6 +139,135 @@ namespace FakeNewsDetectorApp
             Console.WriteLine("Total rating is: " + total);
 
             return ((total > 0) ? true : false);
+        }
+
+        public bool Result(List<string> input)
+        {
+            int total = 0;
+           
+            List<string> separted_input = input;
+
+            foreach (string s in separted_input)
+            {
+                string lowered_s = s.ToLower();
+
+                if (storage.ContainsKey(lowered_s))
+                {
+
+                    float positive_average = 0.0f, negative_average = 0.0f;
+
+                    positive_average = (float)storage[lowered_s].first / (float)(storage[lowered_s].first + storage[lowered_s].second);
+                    negative_average = (float)storage[lowered_s].second / (float)(storage[lowered_s].first + storage[lowered_s].second);
+
+                    Console.WriteLine("Word is: " + lowered_s + " and has " + positive_average.ToString() + " positive rating and " + negative_average.ToString() + " negative rating!");
+
+                    if (positive_average > negative_average)
+                    {
+                        total += 1;
+                    }
+                    else if (positive_average < negative_average)
+                    {
+                        total -= 1;
+                    }
+                }
+            }
+
+            Console.WriteLine("Total rating is: " + total);
+
+            return ((total > 0) ? true : false);
+        }
+
+        public bool Relevance(string _main, string _main_source, string []_sources)
+        {
+            positive.Clear();
+            negative.Clear();
+            float total = 0;
+            int total_positive = 0, total_negative = 0;
+            tokenisation temp_token = new tokenisation();
+
+            List<string> separted_main_input = temp_token.Separation(_main);
+            Stack<List<string>> separted_sources_input = new Stack<List<string>>();
+
+            foreach(string s in _sources)
+            {
+                List<string> separted_sources = temp_token.Separation(s);
+                separted_sources_input.Push(separted_sources);
+            }
+            int index = 0;
+            while(separted_sources_input.Count > 0)
+            {
+                List<string> separted_sources = separted_sources_input.Pop();
+                Dictionary<string, int> temp = new Dictionary<string, int>();
+
+                foreach(string s in separted_sources)
+                {
+                    if(separted_main_input.Contains(s))
+                    {
+                        if(!temp.ContainsKey(s))
+                        {
+                            temp.Add(s, (int)(((100.0f / (float)separted_main_input.Count))));
+                        }
+                        else
+                        {
+                            temp[s] += 1;
+                        }
+                    }
+                }
+
+                foreach(var i in temp)
+                {
+                    total += i.Value;
+                }
+
+                if(total > 50)
+                {
+                    if (Result(separted_sources))
+                    {
+                        positive.Add(index);
+                        ++total_positive;
+                    }
+                    else
+                    {
+                        negative.Add(index);
+                        ++total_negative;
+                    }
+
+                    total = 0;
+                }
+                ++index;
+            }
+
+
+            if(Result(_main_source))
+            {
+                if(total_positive < total_negative)
+                {
+                    return false;
+                }
+                else if (total_positive == 0 && 0 == total_negative)
+                {
+                    throw new Exception("Unable to tell from searches,most likely unreliable");
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else 
+            {
+                if (total_positive > total_negative)
+                {
+                    return false;
+                }
+                else if(total_positive == 0 && 0 == total_negative)
+                {
+                    throw new Exception("Unable to tell from searches,most likely unreliable");
+                }
+                else
+                {
+                    return true;
+                }
+            }
         }
 
         public void LoadData()

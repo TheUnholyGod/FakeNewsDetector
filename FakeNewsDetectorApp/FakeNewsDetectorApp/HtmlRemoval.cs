@@ -21,16 +21,25 @@ namespace FakeNewsDetectorApp
             }
             HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
             doc.LoadHtml(test);
-            string title = doc.DocumentNode.SelectSingleNode("//title").InnerText;
+            string title = "";
+            try
+            {
+                title = doc.DocumentNode.SelectSingleNode("//title").InnerText;
+            }
+            catch { }
             //string imgUrl = doc.DocumentNode.SelectSingleNode("//meta[@property='og:image']").Attributes["content"].Value;
             string info = "";
-            foreach (HtmlAgilityPack.HtmlNode n in doc.DocumentNode.SelectNodes("//p"))
+            try
             {
-                info += n.InnerText;
-                info += "\n\n";
+                foreach (HtmlAgilityPack.HtmlNode n in doc.DocumentNode.SelectNodes("//p"))
+                {
+                    info += n.InnerText;
+                    info += "\n\n";
+                }
             }
+            catch { }
             return new ArticleInfo(title, "", info);
-        }
+            }
     }
 
     public class ArticleInfo
@@ -38,6 +47,8 @@ namespace FakeNewsDetectorApp
         string title;
         string imgurl;
         string articleinfo;
+        public string url;
+        public string websitename;
 
         public ArticleInfo(string _title = "none", string _imgurl = "none", string _articleinfo = "none")
         {
