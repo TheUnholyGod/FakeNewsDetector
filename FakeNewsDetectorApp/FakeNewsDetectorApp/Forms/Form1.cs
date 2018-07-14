@@ -36,7 +36,7 @@ namespace FakeNewsDetectorApp
             //}
 
             
-            ArticleInfo baseinfo = HtmlRemoval.ExtractInfo(textBox1.Text);
+            ArticleInfo baseinfo = HtmlRemoval.ExtractInfo(textBox2.Text);
             string[] urls = Program.searcher.Search(baseinfo.Title);
             ArticleInfo[] checkerinfo = new ArticleInfo[urls.Length];
             int i = 0;
