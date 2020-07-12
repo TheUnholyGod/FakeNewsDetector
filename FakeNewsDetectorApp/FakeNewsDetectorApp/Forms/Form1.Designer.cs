@@ -149,6 +149,11 @@ namespace FakeNewsDetectorApp
             this.maroonToolStripMenuItem17 = new System.Windows.Forms.ToolStripMenuItem();
             this.goldenrodToolStripMenuItem17 = new System.Windows.Forms.ToolStripMenuItem();
             this.factResultsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hotTrackToolStripMenuItem18 = new System.Windows.Forms.ToolStripMenuItem();
+            this.silverToolStripMenuItem18 = new System.Windows.Forms.ToolStripMenuItem();
+            this.controlDarkToolStripMenuItem18 = new System.Windows.Forms.ToolStripMenuItem();
+            this.maroonToolStripMenuItem18 = new System.Windows.Forms.ToolStripMenuItem();
+            this.goldenrodToolStripMenuItem18 = new System.Windows.Forms.ToolStripMenuItem();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
@@ -170,12 +175,6 @@ namespace FakeNewsDetectorApp
             this.button5 = new System.Windows.Forms.Button();
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.hotTrackToolStripMenuItem18 = new System.Windows.Forms.ToolStripMenuItem();
-            this.silverToolStripMenuItem18 = new System.Windows.Forms.ToolStripMenuItem();
-            this.controlDarkToolStripMenuItem18 = new System.Windows.Forms.ToolStripMenuItem();
-            this.maroonToolStripMenuItem18 = new System.Windows.Forms.ToolStripMenuItem();
-            this.goldenrodToolStripMenuItem18 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -250,7 +249,7 @@ namespace FakeNewsDetectorApp
             this.resultBoxToolStripMenuItem,
             this.urlButtonToolStripMenuItem});
             this.backgroundToolStripMenuItem.Name = "backgroundToolStripMenuItem";
-            this.backgroundToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.backgroundToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
             this.backgroundToolStripMenuItem.Text = "NewsCheckingTab";
             // 
             // backgroundToolStripMenuItem1
@@ -450,7 +449,7 @@ namespace FakeNewsDetectorApp
             this.noButtonToolStripMenuItem,
             this.backgroundToolStripMenuItem2});
             this.tabPage2ToolStripMenuItem.Name = "tabPage2ToolStripMenuItem";
-            this.tabPage2ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.tabPage2ToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
             this.tabPage2ToolStripMenuItem.Text = "TrainingTab";
             // 
             // trainingBoxToolStripMenuItem
@@ -698,7 +697,7 @@ namespace FakeNewsDetectorApp
             this.negativeLabelToolStripMenuItem,
             this.leaderboardButtonToolStripMenuItem});
             this.tabPage3ToolStripMenuItem.Name = "tabPage3ToolStripMenuItem";
-            this.tabPage3ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.tabPage3ToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
             this.tabPage3ToolStripMenuItem.Text = "ScoreTab";
             // 
             // backgroundToolStripMenuItem3
@@ -1007,7 +1006,7 @@ namespace FakeNewsDetectorApp
             this.checkFactsToolStripMenuItem,
             this.factResultsToolStripMenuItem});
             this.factCheckingTabToolStripMenuItem.Name = "factCheckingTabToolStripMenuItem";
-            this.factCheckingTabToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.factCheckingTabToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
             this.factCheckingTabToolStripMenuItem.Text = "FactCheckingTab";
             // 
             // backgroundToolStripMenuItem4
@@ -1019,7 +1018,7 @@ namespace FakeNewsDetectorApp
             this.maroonToolStripMenuItem15,
             this.goldenrodToolStripMenuItem15});
             this.backgroundToolStripMenuItem4.Name = "backgroundToolStripMenuItem4";
-            this.backgroundToolStripMenuItem4.Size = new System.Drawing.Size(216, 26);
+            this.backgroundToolStripMenuItem4.Size = new System.Drawing.Size(199, 26);
             this.backgroundToolStripMenuItem4.Text = "Background";
             // 
             // hotTrackToolStripMenuItem15
@@ -1066,7 +1065,7 @@ namespace FakeNewsDetectorApp
             this.maroonToolStripMenuItem16,
             this.goldenrodToolStripMenuItem16});
             this.factQueryToolStripMenuItem.Name = "factQueryToolStripMenuItem";
-            this.factQueryToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.factQueryToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.factQueryToolStripMenuItem.Text = "FactQuery";
             // 
             // hotTrackToolStripMenuItem16
@@ -1113,7 +1112,7 @@ namespace FakeNewsDetectorApp
             this.maroonToolStripMenuItem17,
             this.goldenrodToolStripMenuItem17});
             this.checkFactsToolStripMenuItem.Name = "checkFactsToolStripMenuItem";
-            this.checkFactsToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.checkFactsToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.checkFactsToolStripMenuItem.Text = "CheckFactsButton";
             // 
             // hotTrackToolStripMenuItem17
@@ -1160,8 +1159,43 @@ namespace FakeNewsDetectorApp
             this.maroonToolStripMenuItem18,
             this.goldenrodToolStripMenuItem18});
             this.factResultsToolStripMenuItem.Name = "factResultsToolStripMenuItem";
-            this.factResultsToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.factResultsToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.factResultsToolStripMenuItem.Text = "FactResults";
+            // 
+            // hotTrackToolStripMenuItem18
+            // 
+            this.hotTrackToolStripMenuItem18.Name = "hotTrackToolStripMenuItem18";
+            this.hotTrackToolStripMenuItem18.Size = new System.Drawing.Size(164, 26);
+            this.hotTrackToolStripMenuItem18.Text = "HotTrack";
+            this.hotTrackToolStripMenuItem18.Click += new System.EventHandler(this.factResultHotTrackToolStripMenuItem_Click);
+            // 
+            // silverToolStripMenuItem18
+            // 
+            this.silverToolStripMenuItem18.Name = "silverToolStripMenuItem18";
+            this.silverToolStripMenuItem18.Size = new System.Drawing.Size(164, 26);
+            this.silverToolStripMenuItem18.Text = "Silver";
+            this.silverToolStripMenuItem18.Click += new System.EventHandler(this.factResultSilverToolStripMenuItem_Click);
+            // 
+            // controlDarkToolStripMenuItem18
+            // 
+            this.controlDarkToolStripMenuItem18.Name = "controlDarkToolStripMenuItem18";
+            this.controlDarkToolStripMenuItem18.Size = new System.Drawing.Size(164, 26);
+            this.controlDarkToolStripMenuItem18.Text = "ControlDark";
+            this.controlDarkToolStripMenuItem18.Click += new System.EventHandler(this.factResultControlDarkToolStripMenuItem_Click);
+            // 
+            // maroonToolStripMenuItem18
+            // 
+            this.maroonToolStripMenuItem18.Name = "maroonToolStripMenuItem18";
+            this.maroonToolStripMenuItem18.Size = new System.Drawing.Size(164, 26);
+            this.maroonToolStripMenuItem18.Text = "Maroon";
+            this.maroonToolStripMenuItem18.Click += new System.EventHandler(this.factResultMaroonToolStripMenuItem_Click);
+            // 
+            // goldenrodToolStripMenuItem18
+            // 
+            this.goldenrodToolStripMenuItem18.Name = "goldenrodToolStripMenuItem18";
+            this.goldenrodToolStripMenuItem18.Size = new System.Drawing.Size(164, 26);
+            this.goldenrodToolStripMenuItem18.Text = "Goldenrod";
+            this.goldenrodToolStripMenuItem18.Click += new System.EventHandler(this.factResultGoldenrodToolStripMenuItem_Click);
             // 
             // richTextBox3
             // 
@@ -1312,7 +1346,7 @@ namespace FakeNewsDetectorApp
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 23);
             this.button4.TabIndex = 4;
-            this.button4.Text = "Leaderboard";
+            this.button4.Text = "List";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -1393,6 +1427,7 @@ namespace FakeNewsDetectorApp
             this.richTextBox4.Size = new System.Drawing.Size(1172, 300);
             this.richTextBox4.TabIndex = 1;
             this.richTextBox4.Text = "";
+            this.richTextBox4.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBox1_LinkClicked);
             // 
             // textBox1
             // 
@@ -1402,55 +1437,12 @@ namespace FakeNewsDetectorApp
             this.textBox1.Size = new System.Drawing.Size(467, 22);
             this.textBox1.TabIndex = 0;
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(245, 550);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(66, 12);
-            this.progressBar1.TabIndex = 5;
-            // 
-            // hotTrackToolStripMenuItem18
-            // 
-            this.hotTrackToolStripMenuItem18.Name = "hotTrackToolStripMenuItem18";
-            this.hotTrackToolStripMenuItem18.Size = new System.Drawing.Size(216, 26);
-            this.hotTrackToolStripMenuItem18.Text = "HotTrack";
-            this.hotTrackToolStripMenuItem18.Click += new System.EventHandler(this.factResultHotTrackToolStripMenuItem_Click);
-            // 
-            // silverToolStripMenuItem18
-            // 
-            this.silverToolStripMenuItem18.Name = "silverToolStripMenuItem18";
-            this.silverToolStripMenuItem18.Size = new System.Drawing.Size(216, 26);
-            this.silverToolStripMenuItem18.Text = "Silver";
-            this.silverToolStripMenuItem18.Click += new System.EventHandler(this.factResultSilverToolStripMenuItem_Click);
-            // 
-            // controlDarkToolStripMenuItem18
-            // 
-            this.controlDarkToolStripMenuItem18.Name = "controlDarkToolStripMenuItem18";
-            this.controlDarkToolStripMenuItem18.Size = new System.Drawing.Size(216, 26);
-            this.controlDarkToolStripMenuItem18.Text = "ControlDark";
-            this.controlDarkToolStripMenuItem18.Click += new System.EventHandler(this.factResultControlDarkToolStripMenuItem_Click);
-            // 
-            // maroonToolStripMenuItem18
-            // 
-            this.maroonToolStripMenuItem18.Name = "maroonToolStripMenuItem18";
-            this.maroonToolStripMenuItem18.Size = new System.Drawing.Size(216, 26);
-            this.maroonToolStripMenuItem18.Text = "Maroon";
-            this.maroonToolStripMenuItem18.Click += new System.EventHandler(this.factResultMaroonToolStripMenuItem_Click);
-            // 
-            // goldenrodToolStripMenuItem18
-            // 
-            this.goldenrodToolStripMenuItem18.Name = "goldenrodToolStripMenuItem18";
-            this.goldenrodToolStripMenuItem18.Size = new System.Drawing.Size(216, 26);
-            this.goldenrodToolStripMenuItem18.Text = "Goldenrod";
-            this.goldenrodToolStripMenuItem18.Click += new System.EventHandler(this.factResultGoldenrodToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1325, 575);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.richTextBox3);
@@ -1545,7 +1537,6 @@ namespace FakeNewsDetectorApp
         private System.Windows.Forms.ToolStripMenuItem controlDarkToolStripMenuItem8;
         private System.Windows.Forms.ToolStripMenuItem maroonToolStripMenuItem8;
         private System.Windows.Forms.ToolStripMenuItem goldenrodToolStripMenuItem8;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.RichTextBox negativeTextBox;
         private System.Windows.Forms.RichTextBox positiveTextBox;

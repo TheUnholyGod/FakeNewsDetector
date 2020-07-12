@@ -26,7 +26,7 @@ namespace FakeNewsDetectorApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            b_brain.LoadData();
+           // b_brain.LoadData();
             ps_pointSystem.LoadData();
 
             Application.Run(new Form1());

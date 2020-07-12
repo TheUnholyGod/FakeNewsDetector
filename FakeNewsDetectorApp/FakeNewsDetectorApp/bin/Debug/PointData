@@ -1,9 +1,8 @@
 straitstimes 3
-rssing 0
-msn 0
-<<<<<<< HEAD
-yahoo -2
-dailymail -1
+rssing -1
+msn -2
+yahoo 0
+dailymail 0
 scmp 0
 org 0
 cnn 0
@@ -24,14 +23,8 @@ news 0
 kbtx 0
 pbs 2
 bostonglobe 1
-https://blackamericaweb 1
 wkyt 1
 truthdig 1
-http://presscorp -1
-cnbc -1
-=======
-yahoo 0
-dailymail 0
-scmp 0
-org 0
->>>>>>> 83c4a6f58a450ec9ea4c65060cb4b09f97c7e431
+http 0
+cnbc 0
+http://alwaght -1

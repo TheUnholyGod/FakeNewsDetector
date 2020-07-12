@@ -37,13 +37,13 @@ namespace FakeNewsDetectorApp
                 if(prnt.Value == 0)
                     full += prnt.Key + " ";
             }
+            richTextBox1.Text += baseinfo.url + "\n";
             richTextBox1.Text += full;
             
             string[] urls = Program.searcher.Search(baseinfo.Title);
             ArticleInfo[] checkerinfo = new ArticleInfo[urls.Length];
             int i = 0;
 
-            progressBar1.Value = 10;
             richTextBox1.Text += baseinfo.All;
 
             int positive_article = 0, negative_article = 0;
